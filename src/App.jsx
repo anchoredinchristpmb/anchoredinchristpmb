@@ -38,7 +38,7 @@ function App() {
     <div className="products-grid">
       <div className="product-card">
         <div className="product-image">
-          <img src={`${import.meta.env.BASE_URL}Faith-Based Apparel.png`} alt="Faith-Based Apparel" />
+          <img src={`${import.meta.env.BASE_URL}Faith-BasedApparel.png`} alt="Faith-Based Apparel" />
         </div>
         <h3>Faith-Based Apparel</h3>
         <p>High-quality Christian t-shirts and accessories</p>
