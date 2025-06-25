@@ -10,7 +10,8 @@ export default function Navbar() {
     <nav className="navbar" style={{ backgroundColor: 'var(--primary-blue)' }}>
       <div className="navbar-container">
         <a href="#home" className="navbar-logo">
-          <img src="/Logo.jpg" alt="Anchored in Christ Logo" />
+          <img src={`${import.meta.env.BASE_URL}Logo.jpg`} alt="Anchored in Christ Logo" />
+
         </a>
 
         <div className={`navbar-links ${isOpen ? 'active' : ''}`}>

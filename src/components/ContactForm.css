@@ -1,4 +1,4 @@
-.contact-form {
+.contact-info {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
@@ -7,47 +7,81 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
+.contact-section, .payment-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--light-gray);
+  border-radius: 8px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
+.contact-section h2, .payment-section h2 {
   color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.contact-method, .bank-details {
+  margin: 1rem 0;
+}
+
+.whatsapp-link {
+  color: var(--primary-blue);
+  text-decoration: none;
   font-weight: 500;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--accent-blue);
-  border-radius: 4px;
-  font-family: inherit;
+.whatsapp-link:hover {
+  text-decoration: underline;
 }
 
-.form-group textarea {
-  resize: vertical;
+.payment-note {
+  font-style: italic;
+  color: var(--text-light);
 }
 
-.submit-btn {
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.social-icon {
+  color: var(--primary-blue);
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--accent-blue);
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--primary-blue);
   color: var(--white);
-  border: none;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
+.whatsapp-link:hover {
   background-color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.whatsapp-link svg {
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-  .contact-form {
+  .contact-info {
     padding: 1.5rem;
+  }
+  
+  .contact-section, .payment-section {
+    padding: 1rem;
   }
 }

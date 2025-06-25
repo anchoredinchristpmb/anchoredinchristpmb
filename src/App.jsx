@@ -1,3 +1,4 @@
+import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
 import Navbar from './components/Navbar'
 import ContactForm from './components/ContactForm'
 import './App.css'
@@ -31,36 +32,36 @@ function App() {
         </div>
       </section>
 
-      <section id="products" className="section alt">
-        <h2>Our Products</h2>
-        <div className="section-content">
-          <div className="products-grid">
-            <div className="product-card">
-              <div className="product-image">
-                <img src="/Faith-Based Apparel.png" alt="Faith-Based Apparel" />
-              </div>
-              <h3>Faith-Based Apparel</h3>
-              <p>High-quality Christian t-shirts and accessories</p>
-            </div>
-            
-            <div className="product-card">
-              <div className="product-image">
-                <img src="/Devotional Materials.png" alt="Devotional Materials" />
-              </div>
-              <h3>Devotional Materials</h3>
-              <p>Books and journals for spiritual growth</p>
-            </div>
-            
-            <div className="product-card">
-              <div className="product-image">
-                <img src="/Home Decor.png" alt="Home Decor" />
-              </div>
-              <h3>Home Decor</h3>
-              <p>Scripture-based decor for your home</p>
-            </div>
-          </div>
+     <section id="products" className="section alt">
+  <h2>Our Products</h2>
+  <div className="section-content">
+    <div className="products-grid">
+      <div className="product-card">
+        <div className="product-image">
+          <img src={`${import.meta.env.BASE_URL}Faith-Based Apparel.png`} alt="Faith-Based Apparel" />
         </div>
-      </section>
+        <h3>Faith-Based Apparel</h3>
+        <p>High-quality Christian t-shirts and accessories</p>
+      </div>
+      
+      <div className="product-card">
+        <div className="product-image">
+          <img src={`${import.meta.env.BASE_URL}DevotionalMaterials.png`} alt="Devotional Materials" />
+        </div>
+        <h3>Devotional Materials</h3>
+        <p>Books and journals for spiritual growth</p>
+      </div>
+      
+      <div className="product-card">
+        <div className="product-image">
+          <img src={`${import.meta.env.BASE_URL}HomeDecor.png`} alt="Home Decor" />
+        </div>
+        <h3>Home Decor</h3>
+        <p>Scripture-based decor for your home</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="contact" className="section">
         <h2>Contact Us</h2>
@@ -84,8 +85,20 @@ function App() {
           </div>
           <div className="footer-section">
             <h3>Connect With Us</h3>
-            <p>Email: info@anchoredinchrist.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Email: AnchoredinChristPMB@gmail.com</p>
+            <p>WhatsApp: 063 774 9633</p>
+            <p>Contact Person: Thiloshnee Marie</p>
+            <div className="social-icons">
+              <a href="https://instagram.com/anchoredinchrist_pmb" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="social-icon" />
+              </a>
+              <a href="https://facebook.com/anchoredinchristpmb" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="social-icon" />
+              </a>
+              <a href="https://tiktok.com/@anchoredinchrist_pmb" target="_blank" rel="noopener noreferrer">
+                <FaTiktok className="social-icon" />
+              </a>
+            </div>
           </div>
         </div>
         <p className="copyright">&copy; {new Date().getFullYear()} Anchored in Christ. All rights reserved.</p>
