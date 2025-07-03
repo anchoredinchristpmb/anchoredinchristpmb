@@ -9,7 +9,7 @@ export default function ContactForm() {
         <p>Orders can be placed directly via:</p>
         <div className="contact-method">
           <p>Email: <a href="mailto:AnchoredinChristPMB@gmail.com">AnchoredinChristPMB@gmail.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/27637749633" className="whatsapp-link"><FaWhatsapp /> 063 774 9633</a></p>
+          <p>WhatsApp: <a href="https://wa.me/27639386334" className="whatsapp-link"><FaWhatsapp /> 063 938 6334</a></p>
         </div>
         <p>Contact Person: Thiloshnee Marie</p>
         <div className="social-icons">
