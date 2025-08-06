@@ -29,8 +29,8 @@ export default function ContactForm() {
         <h2>Payment Information</h2>
         <div className="bank-details">
           <p>Bank: FNB</p>
-          <p>Account Name: Anchored in Christ</p>
-          <p>Account Number: 63161341127</p>
+          <p>Account Name: Anchored in Christ PTY (LTD)</p>
+          <p>Account Number: 63167673342</p>
           <p>Branch Code: 255355</p>
         </div>
         <p className="payment-note">Please use your order number or name as a reference when making your payment.</p>

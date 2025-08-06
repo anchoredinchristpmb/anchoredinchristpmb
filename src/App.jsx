@@ -1,5 +1,7 @@
 import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import LoginPage from './manager/pages/LoginPage';
+import DashboardPage from './manager/pages/DashboardPage';
 import Navbar from './components/Navbar'
 import ContactForm from './components/ContactForm'
 import ProductsPage from './pages/ProductsPage'
@@ -115,6 +117,12 @@ function App() {
           </>
         } />
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/manager/login" element={<LoginPage />} />
+        <Route path="/manager/dashboard" element={
+          localStorage.getItem('managerLoggedIn') === 'true' 
+            ? <DashboardPage /> 
+            : <Navigate to="/manager/login" />
+        } />
       </Routes>
     </div>
   )
