@@ -118,11 +118,7 @@ function App() {
         } />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/manager/login" element={<LoginPage />} />
-        <Route path="/manager/dashboard" element={
-          localStorage.getItem('managerLoggedIn') === 'true' 
-            ? <DashboardPage /> 
-            : <Navigate to="/manager/login" />
-        } />
+        <Route path="/manager/dashboard" element={<DashboardPage />} />
       </Routes>
     </div>
   )

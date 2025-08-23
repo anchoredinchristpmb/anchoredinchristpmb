@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase/config';
 import './Navbar.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -18,6 +28,9 @@ export default function Navbar() {
           <Link to="/#mission" className="nav-link">Mission</Link>
           <Link to="/products" className="nav-link">Products</Link>
           <Link to="/#contact" className="nav-link">Contact</Link>
+          {user && (
+            <Link to="/manager/dashboard" className="nav-link">Dashboard</Link>
+          )}
         </div>
 
         <div className="menu-icon" onClick={toggleMenu}>
